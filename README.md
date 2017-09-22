@@ -1,6 +1,6 @@
 ![FeedlySharp](https://raw.github.com/ceee/FeedlySharp/master/feedlysharp.png)
 
-**FeedlySharp** is a C#.NET portable class library that integrates the [Feedly API](https://developer.feedly.com/).
+**FeedlySharp** is a C#.NET Standard class library that integrates the [Feedly API](https://developer.feedly.com/).
 
 ---
 
@@ -12,12 +12,13 @@
 
 ## Supported platforms
 
-FeedlySharp is a **Portable Class Library**, therefore it's compatible with multiple platforms and Universal Apps:
+FeedlySharp is a **.NET Standard 1.1+ Class Library**, therefore it's compatible with multiple platforms and Universal Apps:
 
 - **.NET** >= 4.5 (including WPF)
-- **Windows Phone** (Silverlight + WinPRT) >= 8
+- **Windows Phone** >= 8.1
 - **Windows Store** >= 8
 - **Xamarin** iOS + Android
+- **UWP**
 
 ## Contributors
 

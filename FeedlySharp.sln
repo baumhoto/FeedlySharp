@@ -1,13 +1,22 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2013
-VisualStudioVersion = 12.0.30723.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedlySharp", "FeedlySharp\FeedlySharp.csproj", "{32152AF4-808D-4760-B3EF-001ED46FAA25}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedlySharp.Tests", "FeedlySharp.Tests\FeedlySharp.Tests.csproj", "{89BFAE7F-EA8E-454A-B299-665926BC363F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FeedlySharp.Console", "FeedlySharp.Console\FeedlySharp.Console.csproj", "{DC056E22-14E3-4E5E-8E9D-E805D601F003}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FeedlySharp", "FeedlySharp\FeedlySharp.csproj", "{26C43B03-9A89-4569-AEA7-AF5F3EEFF715}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Repo", "Repo", "{4AC913CD-34F1-4330-856A-49CD0FCDDDC7}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+		.gitattributes = .gitattributes
+		.gitignore = .gitignore
+		CHANGELOG.md = CHANGELOG.md
+		feedlysharp.png = feedlysharp.png
+		LICENSE-MIT = LICENSE-MIT
+		README.md = README.md
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,20 +24,19 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{32152AF4-808D-4760-B3EF-001ED46FAA25}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{32152AF4-808D-4760-B3EF-001ED46FAA25}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{32152AF4-808D-4760-B3EF-001ED46FAA25}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{32152AF4-808D-4760-B3EF-001ED46FAA25}.Release|Any CPU.Build.0 = Release|Any CPU
 		{89BFAE7F-EA8E-454A-B299-665926BC363F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{89BFAE7F-EA8E-454A-B299-665926BC363F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{89BFAE7F-EA8E-454A-B299-665926BC363F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{89BFAE7F-EA8E-454A-B299-665926BC363F}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DC056E22-14E3-4E5E-8E9D-E805D601F003}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DC056E22-14E3-4E5E-8E9D-E805D601F003}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DC056E22-14E3-4E5E-8E9D-E805D601F003}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DC056E22-14E3-4E5E-8E9D-E805D601F003}.Release|Any CPU.Build.0 = Release|Any CPU
+		{26C43B03-9A89-4569-AEA7-AF5F3EEFF715}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{26C43B03-9A89-4569-AEA7-AF5F3EEFF715}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{26C43B03-9A89-4569-AEA7-AF5F3EEFF715}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{26C43B03-9A89-4569-AEA7-AF5F3EEFF715}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4AC3EF7F-AC41-4B7D-A25D-45A47EBCAABF}
 	EndGlobalSection
 EndGlobal
