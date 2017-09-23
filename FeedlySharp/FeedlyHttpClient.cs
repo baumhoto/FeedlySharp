@@ -1,4 +1,4 @@
-﻿using FeedlySharp.Extensions;
+using FeedlySharp.Extensions;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Serialization;
 using System;
@@ -26,10 +26,10 @@ namespace FeedlySharp
 
 
     public async Task<T> Request<T>(
-      HttpMethod method, 
-      string requestUri, 
-      object body = null, 
-      bool bodyAsJson = false, 
+      HttpMethod method,
+      string requestUri,
+      object body = null,
+      bool bodyAsJson = false,
       bool isOauth = true,
       CancellationToken cancellationToken = default(CancellationToken)
     ) where T : class, new()
@@ -50,10 +50,10 @@ namespace FeedlySharp
 
 
     public async Task<string> Request(
-      HttpMethod method, 
-      string requestUri, 
-      object body = null, 
-      bool bodyAsJson = false, 
+      HttpMethod method,
+      string requestUri,
+      object body = null,
+      bool bodyAsJson = false,
       bool isOauth = true,
       CancellationToken cancellationToken = default(CancellationToken)
     )
@@ -171,7 +171,7 @@ namespace FeedlySharp
         return;
       }
 
-      throw new Exception(response.StatusCode.ToString()); // TODO
+      throw new HttpRequestException(response.StatusCode.ToString()); // TODO
     }
 
 
