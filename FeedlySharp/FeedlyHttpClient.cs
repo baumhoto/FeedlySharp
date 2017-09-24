@@ -171,7 +171,7 @@ namespace FeedlySharp
         return;
       }
 
-      throw new HttpRequestException(response.StatusCode.ToString()); // TODO
+      throw new HttpRequestException($"HTTP {response.StatusCode}: {response.Content.ReadAsStringAsync().Result}"); // TODO
     }
 
 

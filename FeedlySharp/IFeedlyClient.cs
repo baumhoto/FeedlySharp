@@ -27,7 +27,7 @@ namespace FeedlySharp
     Task<string> GetOPML(CancellationToken cancellationToken = default(CancellationToken));
     Task<Dictionary<string, string>> GetPreferences(CancellationToken cancellationToken = default(CancellationToken));
     Task<FeedlyUser> GetProfile(CancellationToken cancellationToken = default(CancellationToken));
-    Task<FeedlyStreamEntriesResponse> GetStreamEntries(string id, ContentType type, int? count = null, FeedSorting sorting = FeedSorting.Newest, bool? unreadOnly = null, DateTime? newerThan = null, string continuation = null, CancellationToken cancellationToken = default(CancellationToken));
+    Task<FeedlyStreamEntriesResponse> GetStreamEntries(string id, ContentType? type, int? count = null, FeedSorting sorting = FeedSorting.Newest, bool? unreadOnly = null, DateTime? newerThan = null, string continuation = null, CancellationToken cancellationToken = default(CancellationToken));
     Task<FeedlyStreamEntryIdsResponse> GetStreamEntryIds(string id, ContentType type, int? count = null, FeedSorting sorting = FeedSorting.Newest, bool? unreadOnly = null, DateTime? newerThan = null, string continuation = null, CancellationToken cancellationToken = default(CancellationToken));
     Task<List<FeedlySubscription>> GetSubscriptions(CancellationToken cancellationToken = default(CancellationToken));
     Task<List<FeedlyTag>> GetTags(CancellationToken cancellationToken = default(CancellationToken));

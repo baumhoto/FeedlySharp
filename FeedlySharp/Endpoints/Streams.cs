@@ -1,4 +1,4 @@
-﻿using FeedlySharp.Models;
+using FeedlySharp.Models;
 using System;
 using System.Collections.Generic;
 using System.Net.Http;
@@ -73,7 +73,7 @@ namespace FeedlySharp
     /// <returns></returns>
     public async Task<FeedlyStreamEntriesResponse> GetStreamEntries(
       string id,
-      ContentType type,
+      ContentType? type = null,
       int? count = null,
       FeedSorting sorting = FeedSorting.Newest,
       bool? unreadOnly = null,
@@ -82,7 +82,7 @@ namespace FeedlySharp
       CancellationToken cancellationToken = default(CancellationToken))
     {
       Dictionary<string, string> parameters = new Dictionary<string, string>();
-      parameters["streamId"] = ValueToResource(type, id);
+      parameters["streamId"] = type == null ? id : ValueToResource(type.Value, id);
       parameters["ranked"] = sorting.ToString().ToLower();
       if (count.HasValue)
       {
