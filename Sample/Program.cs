@@ -1,7 +1,6 @@
-using System;
-
 namespace Sample
 {
+  using System;
   using System.IO;
   using System.Xml.Serialization;
   using FeedlySharp;
@@ -10,7 +9,7 @@ namespace Sample
   {
     static void Main(string[] args) {
       Config config = GetConfig();
-      var feedly = new FeedlyClient(CloudEnvironment.Production, clientId: null, clientSecret: null,
+      var feedly = new FeedlyClient(CloudEnvironment.Sandbox, clientId: null, clientSecret: null,
         redirectUri: "urn:ietf:wg:oauth:2.0:oob");
       feedly.Activate(config.Authentication.AccessToken, config.Authentication.UserID);
       foreach(var entry in feedly.GetStreamEntries($"user/{config.Authentication.UserID}/category/global.all").Result.Items) {

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -73,7 +73,7 @@ namespace FeedlySharp
 
     private string GetCloudUri(CloudEnvironment environment)
     {
-      return String.Format("https://{0}.feedly.com", environment == CloudEnvironment.Production ? "cloud" : "sandbox");
+      return String.Format("https://{0}.feedly.com", environment == CloudEnvironment.Production ? "cloud" : "sandbox7");
     }
 
     private string ValueToResource(string key, string value, bool encode = true)
