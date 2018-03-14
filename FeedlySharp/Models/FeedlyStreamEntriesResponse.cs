@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,6 +10,6 @@ namespace FeedlySharp.Models
   {
     public string Continuation { get; set; }
 
-    public List<FeedlyEntry> Items { get; set; }
+    public List<FeedlyEntry> Items { get; set; } = new List<FeedlyEntry>();
   }
 }

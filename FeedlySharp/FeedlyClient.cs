@@ -24,7 +24,7 @@ namespace FeedlySharp
 
     private string AccessToken { get; set; }
 
-    private string UserId { get; set; }
+    public string UserId { get; set; }
 
     private FeedlyHttpClient Client { get; set; }
 
@@ -36,7 +36,7 @@ namespace FeedlySharp
     /// <param name="clientSecret">The client secret.</param>
     /// <param name="redirectUri">The redirect URI.</param>
     /// <exception cref="System.ArgumentNullException">redirectUri;Authentication and token generation requires an URI to redirect to afterwards</exception>
-    public FeedlyClient(CloudEnvironment environment, string clientId, string clientSecret, string redirectUri)
+    public FeedlyClient(CloudEnvironment environment, string clientId, string clientSecret, string redirectUri, bool developerMode)
     {
       if (String.IsNullOrEmpty(redirectUri))
       {
@@ -47,7 +47,7 @@ namespace FeedlySharp
       ClientId = clientId;
       ClientSecret = clientSecret;
       RedirectUri = redirectUri;
-      Client = new FeedlyHttpClient(new Uri(CloudUri, UriKind.Absolute));
+      Client = new FeedlyHttpClient(new Uri(CloudUri, UriKind.Absolute), developerMode);
     }
 
     /// <summary>

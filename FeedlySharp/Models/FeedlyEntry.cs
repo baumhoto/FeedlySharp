@@ -1,4 +1,4 @@
-﻿using Newtonsoft.Json;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -50,5 +50,7 @@ namespace FeedlySharp.Models
     public FeedlyOrigin Origin { get; set; }
 
     public List<FeedlyCategory> Categories { get; set; }
+
+    public List<FeedlyLink> Enclosure { get; set; }
   }
 }

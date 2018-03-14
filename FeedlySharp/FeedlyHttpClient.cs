@@ -17,10 +17,12 @@ namespace FeedlySharp
   {
     public string AccessToken { get; set; }
 
+    public bool DeveloperMode { get; set; }
 
-    public FeedlyHttpClient(Uri baseUri) : base()
+    public FeedlyHttpClient(Uri baseUri, bool developerMode = false) : base()
     {
       BaseAddress = baseUri;
+      this.DeveloperMode = developerMode;
       //DefaultRequestHeaders.Add("Accept", "application/json");
     }
 
@@ -72,7 +74,7 @@ namespace FeedlySharp
       }
 
       // OAuth header
-      if (isOauth)
+      if (this.DeveloperMode || isOauth)
       {
         request.Headers.Add("Authorization", String.Format("OAuth {0}", AccessToken));
       }
@@ -128,7 +130,8 @@ namespace FeedlySharp
     /// <exception cref="PocketException">Parse error.</exception>
     private T DeserializeJson<T>(string json) where T : class, new()
     {
-      json = json.Replace("[]", "{}");
+      // why was this done? when emtpy array is returned JsonConvert fails
+      // json = json.Replace("[]", "{}");
 
       // deserialize object
       T parsedResponse = JsonConvert.DeserializeObject<T>(
